@@ -15,26 +15,28 @@ div#header {
 
 div#container {
   height: 400px;
+  width: 60%;
   float: left;
   padding: 20px;
-  width: 67%;
   background-color: white;
 }
 
 div#trends {
-  float: right;
-  padding: 30px;
+  float: left;
+  padding: 10px;
+  position: relative;
+  left: 20px;
   background-color: white;
 }
 
 div#dashboard {
-  width: 60%;
+  width: 80%;s
   padding: 10px;
   margin: 0 auto;
 }
 
 div#messageBoard {
-  clear:both;
+  clear: both;
   color: white;
   padding: 15px;
   font-size: 16px;
@@ -42,9 +44,19 @@ div#messageBoard {
 }
 
 div#tweetCount {
-    clear: right;
-    float: right;
-    padding: 10px;
-    color: white;
-    font-size: 16px;
+  clear: right;
+  float: left;
+  width:30%;
+  position: relative; left : 20px;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+  left: 20px;
+}
+
+div#footer {
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+  font-size: 12px;
 }

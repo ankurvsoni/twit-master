@@ -12,7 +12,7 @@ function requestData() {
         url: 'fetch',
         success: function(users) {
             categories = _.pluck(users, 'name');
-            console.log(categories);;
+            // console.log(categories);;
             data = [];
             for (var i = 0, size = users.length; i < size; i++) {
                 var user = users[i];
@@ -27,8 +27,8 @@ function requestData() {
             chart.xAxis[0].setCategories(categories);
             chart.redraw();
 
-            // call it again after two second
-            setTimeout(requestData, 2000);
+            // call it again after five second
+            setTimeout(requestData, 5000);
         },
         cache: false
     });
@@ -41,8 +41,8 @@ function getStartTime() {
         success: function(statStartTime) {
             startTime = statStartTime.time;
             console.log(startTime);
-            // call it again after six minutes
-            setTimeout(getStartTime, 10 * 60 * 1000);
+            // call it again after 1 min
+            setTimeout(getStartTime, 60 * 1000);
         },
         cache: false
     });
@@ -51,15 +51,14 @@ function getStartTime() {
 function getTrends() {
     $.ajax({
         url: 'trends',
-        async: false,
         success: function(trends) {
             $("#trends").empty();
             $("#trends").append($('<p>Currently trending twitter topics</p>'));
             _.each(trends, function(trend) {
                 $("#trends").append($('<p><a href="http://www.twitter.com/search?q=' + escape(trend) + '" target="new">' + trend + '</a></p>'));
             });
-            // call it again after six minutes
-            setTimeout(getTrends, 6 * 60 * 1000);
+            // call it again after three minutes
+            setTimeout(getTrends, 3 * 60 * 1000);
         },
         cache: false
     });
@@ -71,8 +70,8 @@ function getTweetCount() {
         success: function(tweetCount) {
             $("#tweetCount").empty();
             $("#tweetCount").append($('<p>Total tweets received: ' + tweetCount + '</p>'));
-            // call it again after six minutes
-            setTimeout(getTweetCount, 5000);
+            // call it again after 3 seconds
+            setTimeout(getTweetCount, 3000);
         },
         cache: false
     });
@@ -118,6 +117,7 @@ $(document).ready(function() {
                 enabled: true
             }
         }],
+        
         exporting: {
             enabled: false
         },
