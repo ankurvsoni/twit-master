@@ -1,0 +1,50 @@
+body {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
+    Verdana, Tahoma, sans-serif;
+  font-size: 12px;
+  background-color: black;
+}
+
+div#header {
+  margin: 0 auto;
+  height: 175px;
+  background-image: url("../images/logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+div#container {
+  height: 400px;
+  float: left;
+  padding: 20px;
+  width: 67%;
+  background-color: white;
+}
+
+div#trends {
+  float: right;
+  padding: 30px;
+  background-color: white;
+}
+
+div#dashboard {
+  width: 60%;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+div#messageBoard {
+  clear:both;
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  text-align: center;
+}
+
+div#tweetCount {
+    clear: right;
+    float: right;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+}
